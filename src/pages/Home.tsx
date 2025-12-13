@@ -10,35 +10,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 import {
-  Shield,
-  Zap,
+  Shield, Zap,
   Home as HomeIcon,
-  Radio,
-  Clock,
-  Wifi,
-  Smartphone,
-  Laptop,
-  Tv,
-  Refrigerator,
-  Waves,
-  Monitor,
-  Building2,
-  GraduationCap,
-  Stethoscope,
-  Coffee,
-  Users,
-  Briefcase,
-  Heart,
-  Award,
-  CheckCircle,
-  Mail,
-  Phone,
-  PhoneCall,
-  MapPin,
-  Send,
-  Download,
-  Play,
-} from "lucide-react";
+  Radio, Clock,
+  Wifi, Smartphone,
+  Laptop, Tv,
+  Refrigerator, Waves,
+  Monitor, Building2,
+  GraduationCap, Stethoscope,
+  Coffee, Users,
+  Briefcase, Heart,
+  Award, CheckCircle,
+  Mail, Phone,
+  PhoneCall, MapPin,
+  Send, Download,
+  Play, } 
+  from "lucide-react";
 
 import heroBg from "@/assets/hero-back.webp";
 import heroBgMobile from "@/assets/hero-back-mobile.jpg";
@@ -50,15 +37,38 @@ import brochurePage2 from "@/assets/brochure/brochure-page-2.jpg";
 import brochurePage3 from "@/assets/brochure/brochure-page-3.jpg";
 import brochurePage4 from "@/assets/brochure/brochure-page-4.jpg";
 
-import intro1 from "@/assets/videos/intro1.mp4";
-import protects2 from "@/assets/videos/protects2.mp4";
-import bloodtest3 from "@/assets/videos/bloodtest3.mp4";
-import doctor4 from "@/assets/videos/doctor4.mp4";
-
 import intro1Poster from "@/assets/video-posters/intro1.jpg";
 import protects2Poster from "@/assets/video-posters/protects2.jpg";
 import bloodtest3Poster from "@/assets/video-posters/bloodtest3.jpg";
 import doctor4Poster from "@/assets/video-posters/doctor4.jpg";
+
+const videos = [
+{
+  id: 1,
+  title: "Introduction to emGuarde™",
+  youtubeId: "YEBWPoCnQ6M",
+  poster: intro1Poster,
+},
+{
+  id: 2,
+  title: "How emGuarde™ Protects You",
+  youtubeId: "mrZjxZQtU4A",
+  poster: protects2Poster,
+},
+{
+  id: 3,
+  title: "Blood tests before and after using emGuarde™",
+  youtubeId: "pBFyP_mg4es",
+  poster: bloodtest3Poster,
+},
+
+{
+  id: 4,
+  title: "The effect of EMF and radiation on children explained by Dr. Satvinder Singh Khelae",
+  youtubeId: "6rn7XEo9PMY",
+  poster: doctor4Poster,
+},
+];
 
 import {
   Accordion,
@@ -93,6 +103,9 @@ const Home = () => {
     phone: "",
     message: "",
   });
+
+  const [activeVideoId, setActiveVideoId] = useState<number | null>(null);
+
 
   const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
@@ -317,24 +330,6 @@ const Home = () => {
     },
   ];
 
-  const videos = [
-    { id: 1, title: "Introduction to emGuarde™", src: intro1, poster: intro1Poster },
-    { id: 2, title: "How emGuarde™ Protects You", src: protects2, poster: protects2Poster },
-    {
-      id: 3,
-      title: "Blood tests before and after using emGuarde™",
-      src: bloodtest3,
-      poster: bloodtest3Poster,
-    },
-    {
-      id: 4,
-      title:
-        "The effect of EMF and radiation on children explained by Dr. Satvinder Singh Khelae",
-      src: doctor4,
-      poster: doctor4Poster,
-    },
-  ];
-
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Helmet>
@@ -523,35 +518,46 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {videos.map((video) => (
-              <div key={video.id} className="relative">
-                <div
-                  className="aspect-video bg-muted rounded-lg overflow-hidden relative group cursor-pointer"
-                  onClick={() => handleVideoClick(video.id)}
-                >
-                  <video
-                    ref={(el) => {
-                      videoRefs.current[video.id] = el;
-                    }}
-                    src={video.src}
-                    poster={video.poster}
-                    muted
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
 
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-12 h-12 bg-black/40 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-black/60 transition">
-                      <Play className="w-6 h-6 text-gold" />
-                    </div>
-                  </div>
+              <div key={video.id} className="space-y-2">
+                {/* Video container */}
+
+                <div className="aspect-video bg-black rounded-lg overflow-hidden relative">
+                  {activeVideoId === video.id ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen />
+                  ) : (
+
+                    <button
+                      type="button"
+                      onClick={() => setActiveVideoId(video.id)}
+                      className="w-full h-full relative group"
+                    >
+                      <img
+                        src={video.poster}
+                        alt={video.title}
+                        className="w-full h-full object-cover"
+                      />
+
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:bg-black/80 transition">
+                          <Play className="w-7 h-7 text-gold" />
+                        </div>
+                      </div>
+                    </button>
+                  )}
                 </div>
 
-                <p className="text-m text-muted-foreground text-center mt-2">
+                {/* Video title */}
+                <p className="text-sm text-muted-foreground text-center leading-snug">
                   {video.title}
                 </p>
               </div>
+
             ))}
           </div>
         </div>
@@ -1107,17 +1113,21 @@ const Home = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-secondary">
         <div className="container mx-auto px-4">
+
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Get in <span className="text-gold">Touch</span>
             </h2>
-            <p className="text-base text-muted-foreground max-w-4xl mx-auto">
-              Contact us to learn more about emGuarde™
-            </p>
+
+            <p className="text-m text-muted-foreground max-w-4xl mx-auto">
+              Contact us to learn more about emGuarde™ <br />
+          </p>
           </div>
+
           <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {/* Contact Info */}
             <div>
+
               <h3 className="text-xl font-bold mb-6">
                 <span className="text-gold">Contact</span> Information
               </h3>
@@ -1245,7 +1255,12 @@ const Home = () => {
                 </Button>
               </form>
             </div>
-          </div>
+          </div> <br/>
+
+          <p className="text-sm text-muted-foreground max-w-3xl mx-auto text-center mb-10">
+            If you’d like a better understanding of emGuarde™, you can reach out to us for a complimentary demonstration , subject to availability.
+          </p>
+
         </div>
       </section>
 

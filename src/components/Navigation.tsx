@@ -8,7 +8,6 @@ export const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Darken navbar after scroll AND close mobile menu when user scrolls
       setIsScrolled(window.scrollY > 50);
       setIsMobileMenuOpen(false);
     };
@@ -23,12 +22,12 @@ export const Navigation = () => {
     { name: "How It Works", sectionId: "how-it-works", external: false },
     { name: "Specs", sectionId: "specifications", external: false },
     { name: "Certifications", sectionId: "certifications", external: false },
-    { name: "FAQs", sectionId: "faqs", external: false },
   
     { name: "Enagic", url: "https://enagickangen.co.in/", external: true },
     { name: "Kangen Water", url: "https://enagickangen.co.in/kangen-water/#what-is-kangen", external: true },
     
     { name: "Contact", sectionId: "contact", external: false },
+    { name: "FAQs", sectionId: "faqs", external: false },
 
   ];
 
@@ -82,28 +81,37 @@ export const Navigation = () => {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 flex-nowrap">
-              {navLinks.map((link) =>
-                link.external ? (
-                  <a
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative text-sm text-foreground hover:text-gold transition duration-200">
-                    {link.name}
-                  </a>
-                ) : (
-                  <a
-                    key={link.name}
-                    href={`/#${link.sectionId}`}
-                    onClick={(e) => handleNavClick(e, link.sectionId)}
-                    className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
-                    {link.name}
-                  </a>
-                )
-              )}
-            </div>
+<div className="hidden lg:flex items-center space-x-4 xl:space-x-6 flex-nowrap">
+  {navLinks.map((link) =>
+    link.external ? (
+      <a
+        key={link.name}
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap
+        after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0
+        after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300
+        hover:after:scale-x-100 hover:after:origin-bottom-left"
+      >
+        {link.name}
+      </a>
+    ) : (
+      <a
+        key={link.name}
+        href={`/#${link.sectionId}`}
+        onClick={(e) => handleNavClick(e, link.sectionId)}
+        className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap
+        after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0
+        after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300
+        hover:after:scale-x-100 hover:after:origin-bottom-left"
+      >
+        {link.name}
+      </a>
+    )
+  )}
+</div>
+
 
             {/* Mobile Menu Button */}
             <Button
@@ -112,9 +120,8 @@ export const Navigation = () => {
               className={`lg:hidden w-11 h-11 border border-gold/40 rounded-full
                 ${isMobileMenuOpen ? "bg-black text-gold" : "bg-black/80 text-foreground"}
                 hover:bg-black hover:text-gold`}
-              onClick={() => setIsMobileMenuOpen((open) => !open)}
-            >
-              {/* Keep hamburger icon visible even when open */}
+              onClick={() => setIsMobileMenuOpen((open) => !open)}>
+              
               <Menu size={28} />
             </Button>
           </div>
@@ -144,6 +151,28 @@ export const Navigation = () => {
                     </a>
                   )
                 )}
+
+                {/* Mobile-only contact info */}
+                <div className="mt-4 px-4 pt-4 border-t border-gold/20 lg:hidden">
+                  <p className="text-s text-muted-foreground mb-2">
+                    Contact us
+                  </p>
+
+                  <a
+                    href="tel:+918328668046"
+                    className="block text-sm text-foreground hover:text-gold transition-colors"
+                  >
+                    📞 +91 83286 68046
+                  </a>
+
+                  <a
+                    href="mailto:info@enagickangen.co.in"
+                    className="block text-sm text-foreground hover:text-gold transition-colors mt-1"
+                  >
+                    ✉️ info@enagickangen.co.in
+                  </a>
+                </div>
+
               </div>
             </div>
           )}
