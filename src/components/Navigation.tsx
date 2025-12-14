@@ -18,9 +18,9 @@ export const Navigation = () => {
 
   const navLinks = [
     { name: "Home", sectionId: "hero", external: false },
+    { name: "Specs", sectionId: "specifications", external: false },
     { name: "About", sectionId: "about", external: false },
     { name: "How It Works", sectionId: "how-it-works", external: false },
-    { name: "Specs", sectionId: "specifications", external: false },
     { name: "Certifications", sectionId: "certifications", external: false },
   
     { name: "Enagic", url: "https://enagickangen.co.in/", external: true },
