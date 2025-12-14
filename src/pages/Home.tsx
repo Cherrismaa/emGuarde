@@ -332,46 +332,53 @@ const Home = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <Helmet>
-        <title>
-          emGuarde™ Electromagnetic Noise Harmonizer | Official Home Protection Device
-        </title>
-        <meta
-          name="description"
-          content="Discover emGuarde™, Enagic’s patented device that reduces high-frequency electromagnetic noise in your home for a calmer, healthier living space."
-        />
-        <link rel="canonical" href="https://emguarde.shop/" />
 
-        <meta
-          property="og:title"
-          content="emGuarde™ Electromagnetic Noise Harmonizer | Official Home Protection Device"
-        />
-        <meta
-          property="og:description"
-          content="emGuarde™ helps harmonise targeted high-frequency electromagnetic noise in your home, offering an 8-metre diameter of coverage when placed correctly."
-        />
-        <meta property="og:url" content="https://emguarde.shop/" />
-        <meta property="og:type" content="website" />
+    <Helmet>
+      <title>
+        EMF Protection Device for Home & Office | emGuarde™ Official
+      </title>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              name: "emGuarde™ Electromagnetic Noise Harmonizer",
-              brand: {
-                "@type": "Brand",
-                name: "Enagic",
-              },
-              description:
-                "emGuarde™ is a patented device designed to harmonise targeted high-frequency electromagnetic noise in home environments.",
-              url: "https://emguarde.shop/",
-              image: "https://emguarde.shop/preview.jpg",
-            }),
-          }}
-        />
-      </Helmet>
+      <meta
+        name="description"
+        content="emGuarde™ is a patented EMF protection device designed to help harmonize electromagnetic noise from everyday electronics. Ideal for homes, offices, and workspaces seeking a healthier, calmer environment."
+      />
+
+      <link rel="canonical" href="https://emguarde.shop/" />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="emGuarde™" />
+      <meta
+        property="og:title"
+        content="EMF Protection Device for Home & Office | emGuarde™"
+      />
+      <meta
+        property="og:description"
+        content="Discover emGuarde™, a patented electromagnetic noise harmonizer designed to help manage EMF exposure in modern living and working spaces."
+      />
+      <meta property="og:url" content="https://emguarde.shop/" />
+      <meta property="og:image" content="https://emguarde.shop/preview.jpg" />
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "emGuarde™ Electromagnetic Noise Harmonizer",
+            description:
+              "A patented EMF protection device designed to help harmonize electromagnetic noise from electronic devices in homes and offices.",
+            brand: {
+              "@type": "Brand",
+              name: "emGuarde™",
+            },
+            url: "https://emguarde.shop/",
+            image: "https://emguarde.shop/preview.jpg",
+          }),
+        }}
+      />
+    </Helmet>
 
       {/* Hero Section */}
       <section

@@ -81,38 +81,36 @@ export const Navigation = () => {
             </a>
 
             {/* Desktop Navigation */}
-<div className="hidden lg:flex items-center space-x-4 xl:space-x-6 flex-nowrap">
-  {navLinks.map((link) =>
-    link.external ? (
-      <a
-        key={link.name}
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap
-        after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0
-        after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300
-        hover:after:scale-x-100 hover:after:origin-bottom-left"
-      >
-        {link.name}
-      </a>
-    ) : (
-      <a
-        key={link.name}
-        href={`/#${link.sectionId}`}
-        onClick={(e) => handleNavClick(e, link.sectionId)}
-        className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap
-        after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0
-        after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300
-        hover:after:scale-x-100 hover:after:origin-bottom-left"
-      >
-        {link.name}
-      </a>
-    )
-  )}
-</div>
-
-
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 flex-nowrap">
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap
+                  after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0
+                  after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300
+                  hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <a
+                  key={link.name}
+                  href={`/#${link.sectionId}`}
+                  onClick={(e) => handleNavClick(e, link.sectionId)}
+                  className="relative text-sm text-foreground hover:text-gold transition-colors duration-200 whitespace-nowrap
+                  after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0
+                  after:bg-gold after:origin-bottom-right after:transition-transform after:duration-300
+                  hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  {link.name}
+                </a>
+              )
+            )}
+          </div>
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"

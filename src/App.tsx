@@ -10,7 +10,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import Home from "./pages/Home.tsx";
-import EMGuard from "./pages/EMGuard";
+import EMGuarde from "./pages/emGuarde";
 import Specifications from "./pages/Specifications";
 import Certifications from "./pages/Certifications";
 import FAQs from "./pages/FAQs";
@@ -47,7 +47,7 @@ const App = () => (
 
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/emguard" element={<EMGuard />} />
+              <Route path="/emguarde" element={<EMGuarde />} />
               <Route path="/specifications" element={<Specifications />} />
               <Route path="/certifications" element={<Certifications />} />
               <Route path="/faqs" element={<FAQs />} />

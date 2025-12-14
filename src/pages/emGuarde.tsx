@@ -7,27 +7,34 @@ import deviceImage from "@/assets/emguard-device.jpg";
 const EMGuard = () => {
   return (
     <div className="min-h-screen pt-20">
-      <Helmet>
-        <title>
-          How emGuarde™ Works | Patented Electromagnetic Noise Suppression 3MHz–1000MHz
-        </title>
-        <meta
-          name="description"
-          content="Learn how emGuarde™ uses layered harmonic frequencies to suppress targeted electromagnetic noise between 3MHz and 1000MHz and support a more balanced home environment."
-        />
-        <link rel="canonical" href="https://emguarde.shop/emguard" />
 
-        <meta
-          property="og:title"
-          content="How emGuarde™ Works | Patented Electromagnetic Noise Suppression 3MHz–1000MHz"
-        />
-        <meta
-          property="og:description"
-          content="Discover the core technology behind emGuarde™, a patented device that harmonises targeted high-frequency electromagnetic noise across a 4-meter radius (8-meter diameter) zone."
-        />
-        <meta property="og:url" content="https://emguarde.shop/emguard" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+    <Helmet>
+      <title>
+        How emGuarde™ Works | EMF Protection Technology Explained
+      </title>
+
+      <meta
+        name="description"
+        content="Learn how emGuarde™ works using patented harmonic frequency technology to help manage electromagnetic noise from everyday devices within homes and offices."
+      />
+
+      <link rel="canonical" href="https://emguarde.shop/emguarde" />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="emGuarde™" />
+      <meta
+        property="og:title"
+        content="How emGuarde™ Works | EMF Protection Technology"
+      />
+      <meta
+        property="og:description"
+        content="A clear explanation of emGuarde™ technology and how it helps harmonize electromagnetic noise in modern living and working environments."
+      />
+
+      <meta property="og:image" content="https://emguarde.shop/preview.jpg" />
+      <meta property="og:url" content="https://emguarde.shop/emguarde" />
+    </Helmet>
 
       {/* Hero */}
       <section className="py-20 bg-secondary">

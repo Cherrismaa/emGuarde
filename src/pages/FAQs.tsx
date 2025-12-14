@@ -162,7 +162,27 @@ const FAQs = () => {
           content="Learn everything about emGuarde™—how it works, coverage, certifications, warranty period, adapter specs, placement and more."
         />
         <meta property="og:url" content="https://emguarde.shop/faqs" />
+        <meta property="og:image" content="https://emguarde.shop/preview.jpg" />
         <meta property="og:type" content="website" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+
       </Helmet>
 
       {/* Hero */}

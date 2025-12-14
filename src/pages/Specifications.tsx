@@ -78,7 +78,7 @@ const Specifications = () => {
 
         <meta
           property="og:title"
-          content="emGuarde™ Technical Specifications | Performance & Certifications"
+          content="emGuarde™ Technical Specifications | Performance, Safety & Certifications"
         />
         <meta
           property="og:description"
@@ -86,6 +86,7 @@ const Specifications = () => {
         />
         <meta property="og:url" content="https://emguarde.shop/specifications" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://emguarde.shop/preview.jpg" />
       </Helmet>
 
       {/* Hero */}

@@ -45,6 +45,8 @@ const Contact = () => {
           property="og:description"
           content="Reach out to enquire about emGuarde™, distribution, sales, bulk orders, pricing and support."
         />
+        
+        <meta property="og:image" content="https://emguarde.shop/preview.jpg" />
         <meta property="og:url" content="https://emguarde.shop/contact" />
         <meta property="og:type" content="website" />
       </Helmet>

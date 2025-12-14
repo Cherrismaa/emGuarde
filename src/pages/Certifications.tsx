@@ -34,27 +34,31 @@ const Certifications = () => {
 
   return (
     <div className="min-h-screen pt-20">
-      <Helmet>
-        <title>
-          emGuarde™ Certifications | USM Test, SGS CE, FCC and RoHS Approvals
-        </title>
-        <meta
-          name="description"
-          content="See emGuarde™ certifications, including USM university testing and SGS reports for CE, FCC and RoHS compliance, verified under Enagic’s global quality standards."
-        />
-        <link rel="canonical" href="https://emguarde.shop/certifications" />
 
-        <meta
-          property="og:title"
-          content="emGuarde™ Certifications | USM Test, SGS CE, FCC and RoHS Approvals"
-        />
-        <meta
-          property="og:description"
-          content="Explore how emGuarde™ has been tested and certified by USM and SGS for electromagnetic safety, quality and environmental compliance."
-        />
-        <meta property="og:url" content="https://emguarde.shop/certifications" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+    <Helmet>
+      <title>
+        emGuarde™ Certifications | USM Test, SGS CE, FCC and RoHS Approvals
+      </title>
+
+      <meta
+        name="description"
+        content="See emGuarde™ certifications, including USM university testing and SGS reports for CE, FCC and RoHS compliance, verified under Enagic’s global quality standards."
+      />
+      <link rel="canonical" href="https://emguarde.shop/certifications" />
+
+      <meta
+        property="og:title"
+        content="emGuarde™ Certifications | USM Test, SGS CE, FCC and RoHS Approvals"
+      />
+      <meta
+        property="og:description"
+        content="Explore how emGuarde™ has been tested and certified by USM and SGS for electromagnetic safety, quality and environmental compliance."
+      />
+
+      <meta property="og:image" content="https://emguarde.shop/preview.jpg" />
+      <meta property="og:url" content="https://emguarde.shop/certifications" />
+      <meta property="og:type" content="website" />
+    </Helmet>
 
       {/* Hero */}
       <section className="py-20 bg-secondary">
