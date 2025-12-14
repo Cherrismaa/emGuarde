@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://emguarde.netlify.app/
+**URL**: https://emguarde.shop
 
 ## What technologies are used for this project?
 
