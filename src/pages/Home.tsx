@@ -1183,7 +1183,7 @@ const Home = () => {
                   <div>
                     <h4 className="font-semibold text-sm mb-1">Address</h4>
                     <p className="text-sm text-muted-foreground">
-                      Yousufguda, Hyderabad, Telangana, India.                    </p>
+                       Hyderabad, Telangana, India.                    </p>
                   </div>
                 </div>
 
