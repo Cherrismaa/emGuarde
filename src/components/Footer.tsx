@@ -168,7 +168,7 @@ export const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Yousufguda, Hyderabad, Telangana, India.
+                    Hyderabad, Telangana, India.
                 </span>
               </div>
 
