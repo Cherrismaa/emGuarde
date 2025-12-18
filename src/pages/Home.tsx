@@ -335,7 +335,7 @@ const Home = () => {
 
     <Helmet>
       <title>
-        "EMF Protection Device for Home & Office | emGuarde™ Official"
+        emGuarde™ India | EMF Protection Device for Home & Office 
       </title>
 
       <meta
@@ -350,7 +350,7 @@ const Home = () => {
       <meta property="og:site_name" content="emGuarde™" />
       <meta
         property="og:title"
-        content="EMF Protection Device for Home & Office | emGuarde™ Official"
+        content="emGuarde™ India | EMF Protection Device for Home & Office "
       />
       <meta
         property="og:description"
