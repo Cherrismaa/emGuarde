@@ -335,7 +335,7 @@ const Home = () => {
 
     <Helmet>
       <title>
-        EMF Protection Device for Home & Office | emGuarde™ Official
+        EMF Protection Device for Home & Office | emGuarde™ India
       </title>
 
       <meta
