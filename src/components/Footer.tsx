@@ -72,12 +72,14 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("faqs")}
+                <a
+                  href="https://www.youtube.com/@EnagicHyderabad"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-gold transition-colors"
                 >
-                  FAQs
-                </button>
+                  Youtube Channel
+                </a>
               </li>
             </ul>
           </div>
