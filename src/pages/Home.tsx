@@ -32,10 +32,10 @@ import heroBgMobile from "@/assets/hero-back-mobile.jpg";
 import deviceImage from "@/assets/what-is-emg.png";
 import coverage from "@/assets/small-big.jpg";
 
-import brochurePage1 from "@/assets/brochure/brochure-page-1.jpg";
-import brochurePage2 from "@/assets/brochure/brochure-page-2.jpg";
-import brochurePage3 from "@/assets/brochure/brochure-page-3.jpg";
-import brochurePage4 from "@/assets/brochure/brochure-page-4.jpg";
+import brochurePage1 from "@/assets/brochure/brochure-page-1.png";
+import brochurePage2 from "@/assets/brochure/brochure-page-2.png";
+import brochurePage3 from "@/assets/brochure/brochure-page-3.png";
+import brochurePage4 from "@/assets/brochure/brochure-page-4.png";
 
 import intro1Poster from "@/assets/video-posters/intro1.jpg";
 import protects2Poster from "@/assets/video-posters/protects2.jpg";
