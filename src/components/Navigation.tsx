@@ -22,7 +22,8 @@ export const Navigation = () => {
     { name: "About", sectionId: "about", external: false },
     { name: "How It Works", sectionId: "how-it-works", external: false },
     { name: "Certifications", sectionId: "certifications", external: false },
-  
+    { name: "Brochure", url: "/emguarde-brochure.pdf", external: true},
+
     { name: "Enagic", url: "https://enagickangen.co.in/", external: true },
     { name: "Kangen Water", url: "https://enagickangen.co.in/kangen-water/#what-is-kangen", external: true },
     
